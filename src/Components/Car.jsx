@@ -15,7 +15,7 @@ function Car(props) {
     };
 
     return (
-        <img src={props.carImage} style={carStyle} />
+        <img src={props.carImage} style={carStyle} alt="" />
     );
 }
 

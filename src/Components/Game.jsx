@@ -130,7 +130,7 @@ class Game extends React.Component {
         const posSq = Math.pow(aX, 2) + Math.pow(aY, 2);
         const velocityPosSq = Math.pow(velocityX * aX + velocityY * aY, 2);
        
-        let skidFactor = (posSq == 0 || velocitySq == 0) ? 0 : 1 - (velocityPosSq / posSq / velocitySq);
+        let skidFactor = (posSq === 0 || velocitySq === 0) ? 0 : 1 - (velocityPosSq / posSq / velocitySq);
         if (skidFactor <= 0) skidFactor = 0;        
 
         this.setState({
@@ -188,11 +188,11 @@ class Game extends React.Component {
             score: this.state.score + 1            
         });
 
-        this.cups = this.cups.filter(cup => cup.key != key);
+        this.cups = this.cups.filter(cup => cup.key !== key);
         
         this.updateMessage("Collected cup");
 
-        if (this.cups.length == 0) {
+        if (this.cups.length === 0) {
             this.completedLevel();
         }        
     }

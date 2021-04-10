@@ -14,7 +14,7 @@ function GameItem(props) {
     };
 
     return (
-        <img src={props.image} style={style} />
+        <img src={props.image} style={style} alt="" />
     );
 }
 

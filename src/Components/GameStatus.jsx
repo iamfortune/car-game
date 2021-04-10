@@ -52,7 +52,7 @@ function GameStatus(props) {
             </label>            
             
             <div style={containerStyle}>  
-                <img src={clockImg} style={imgStyle} />
+                <img src={clockImg} style={imgStyle} alt="" />
                 <div style={textDivStyle}>{props.RemainingTime}</div>
             </div>
 
